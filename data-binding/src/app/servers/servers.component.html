@@ -1,2 +1,11 @@
+<!-- with square brackets you are directly binding to native html property (disabled). You bind it to an expression.
+Has to be typescript code within the quotes
+For this we bind it to something that results to a boolean
+
+Can also bind to Directives and custom components-->
+<button class="btn btn-primary" [disabled]="!allowNewServer" >Add Server</button>
+<p [innerText]="allowNewServer"></p>
+<!-- An example of string interpolation of a boolean -->
+<p>{{ allowNewServer }}</p>
 <app-server></app-server>
 <app-server></app-server>
