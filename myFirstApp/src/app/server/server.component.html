@@ -1,1 +1,6 @@
-<p>The server componenet</p>
+<!-- String interpolation: use double curly braces {{ }} and write TypeScript expression. Easiest is property reference
+can also write any expression that will be turned into a string at the end, has to somehow return a string.
+can't be multiline/block expression
+ex: {{ 'server' }}
+Works with a number (ServerId), because it can be converted to a string. -->
+<p>{{'Server'}} with ID {{serverId}} is {{ getServerStatus() }}</p>
