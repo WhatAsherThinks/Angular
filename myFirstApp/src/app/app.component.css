@@ -1,0 +1,8 @@
+/*Command for Bootstrap locally in a project:
+ npm install --save bootstrap@4
+
+ Put the bootstrap file in Angular.json file so Angualr knows to use it:
+ "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              ^^^^^^^^THAT IS THE FILE ABOVE^^^^^^^^^
+              put it above the other src/styles.css*/
