@@ -11,10 +11,16 @@ You can bind to all the events made possible by that HTML element.
 ex: (input)= "onUpdateServerName()"
 The event is an input event which preforms the method each time the event is fired. (every input)
 
-($event) represents the data of that event, informtion.  -->
-<input type="text" class="form-control" (input)="onUpdateServerName($event)">
-<p> {{ serverName }} </p>
+($event) represents the data of that event, informtion.
+<input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
 
+<!-- This shows Two-way Binding.
+You need the formsModule imported in appComponent.ts
+
+Syntax: [{ngModel}]="what youre binding to" -->
+<input type="text" class="form-control" [(ngModel)]="serverName">
+
+<!-- <p> {{ serverName }} </p> -->
 
 <button class="btn btn-primary"
 [disabled]="!allowNewServer"
