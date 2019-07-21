@@ -1,0 +1,12 @@
+
+<label>Username</label>
+
+<!-- uses two-way binding to username property -->
+<input type="text" class="form-control" [(ngModel)]="username">
+
+<!-- uses string interpolation to print username -->
+<p> {{username}} </p>
+
+<!-- uses the html diabled property to disable the button is usernane is empty.
+also uses event binding with the click event to reset the username -->
+<button class='btn btn-primary' [disabled]=" username === '' " (click)="onUserReset()">Reset User</button>
