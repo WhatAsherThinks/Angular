@@ -30,6 +30,17 @@ Syntax: [{ngModel}]="what youre binding to" -->
 <!-- An example of string interpolation of a boolean
 <p>{{ allowNewServer }}</p> -->
 
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+
+<!-- A structural directive (either adds or removes something to DOM).
+The * is needed before it to indicate it is a structural directive. (wont work without it).
+What is in the "" , must equate to true or false
+the else statement uses the local reference (noServer) to see what to show in NgTemplate conditionally-->
+<p *ngIf="serverCreated; else noServer">Server was created. Server Name: {{serverName}}</p>
+<!-- # indicates a local reference
+ng template is used to make an angular template in the DOM and use as a marker -->
+<ng-template #noServer>
+  <p>No server was created</p>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
