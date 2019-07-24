@@ -1,7 +1,10 @@
-<!-- String interpolation: use double curly braces {{ }} and write TypeScript expression. Easiest is property reference
-can also write any expression that will be turned into a string at the end, has to somehow return a string.
-can't be multiline/block expression
-ex: {{ 'server' }}
-Works with a number (ServerId), because it can be converted to a string.
-Can work with a method, if it returns a string  -->
-<p>{{'Server'}} with ID {{serverId}} is {{ getServerStatus() }}</p>
+
+<!-- attribute directives do not add or remove elements. Only alter the element they are placed on.
+The square bracets [] are used because we are binding to a property of the directive. has the same name, ngStyle
+Styling: use camel casing, or wrap in single quotes
+
+ngClass: allows us to add or remove css classes
+the parameters are css class name and conditions whether the class should appear or not-->
+
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'Online'}">{{'Server'}} with ID {{serverId}} is {{ getServerStatus() }}</p>
