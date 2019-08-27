@@ -1,0 +1,7 @@
+{
+    "editor.cursorBlinking": "expand",
+    "editor.cursorStyle": "block-outline",
+    "editor.cursorWidth": 1,
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "workbench.iconTheme": "material-icon-theme"
+}
